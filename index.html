@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Anime</title>
+    <meta charset="utf-8">
+    <script src="code.js"></script>
+  </head>
+  <body>
+
+    <template id="home">
+      <h1>Welcome</h1>
+      <h2>This is the Home Page</h2>
+      <p>To see what you have in the database click the display button</p>
+      <p>To add a new anime click the add button</p>
+      <p>To delete an anime click on the delete button</p>
+    </template>
+
+    <template id= "display">
+      <h1>Anime Database</h1>
+      <p>Here you can see all the anime you currentyl have in the database</p>
+      <h2>Display</h2>
+    </template>
+
+    <template id="search">
+      <h2>Search the Database</h2>
+      <form id="search_anime">
+          <select id="drop">
+              <option value="AnimeName">Name</option>
+              <option value="Author">Author</option>
+              <option value="Year">Year</option>
+              <option value="Seasons">Seasons</option>
+          </select>
+          <input type="text" name="criteria" required/>
+          <input type="submit" value="Search"/>
+      </form>
+  </template>
+  
+  <template id="add">
+      <h2>Add an Anime</h2>
+      <form id="add_anime">
+          <label>Name
+              <input type="text" name="AnimeName" required/>
+          </label>
+          <label>Author
+              <input type="text" name="Author" required/>
+          </label>
+          <label>Year
+              <input type="text" name="Year" required/>
+          </label>
+          <label>Seasons
+              <input type="text" name="Seasons" required/>
+          </label>
+          <input type="submit" value="Add"/>
+      </form>
+  </template>
+  
+  <template id="del">
+      <h2>Remove a Anime</h2>
+      <form id="remove_anime">
+          <label>ID
+              <input type="text" name="AnimeID" required/>
+          </label>
+          <input type="submit" value="Remove"/>
+      </form>
+  </template>
+  
+  <button id="displayButton">Display</button>
+  <button id="searchButton">Search</button>
+  <button id="addButton">Add</button>
+  <button id="deleteButton">Delete</button>
+  <div id="root"></div>
+  </body>
+  </html>
